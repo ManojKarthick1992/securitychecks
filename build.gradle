@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id "org.owasp.dependencycheck" version "7.0.0"
+}
+apply plugin: 'org.owasp.dependencycheck'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'ch.qos.logback.contrib', name: 'logback-jackson', version: '0.1.5'
+
+}
+
+dependencyCheck {
+    autoUpdate = true
+    failBuildOnCVSS = 2
+    suppressionFile = 'tools/dependency-check/dependency-check-known-issues.xml'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+check.dependsOn dependencyCheckAnalyze
+
+gradle.taskGraph.whenReady { graph ->
+    if (graph.hasTask(build)) {
+        dependencyCheckAnalyze.enabled = true
+    }
+}
