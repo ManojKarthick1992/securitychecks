@@ -1,28 +1,40 @@
 plugins {
     id 'java'
-    id "org.owasp.dependencycheck" version "7.0.0"
+    id "org.owasp.dependencycheck" version "8.2.1"
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 apply plugin: 'org.owasp.dependencycheck'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
-sourceCompatibility = JavaVersion.VERSION_11
+version '0.0.1-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
+    mavenLocal()
     mavenCentral()
+
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation group: 'ch.qos.logback.contrib', name: 'logback-jackson', version: '0.1.5'
-
+    implementation 'com.google.guava:guava:31.1-jre'
 }
+
+task copyTalismanHook(type: Exec) {
+    workingDir "$projectDir"
+    commandLine 'sh', 'tools/talisman/talisman-precommit.sh'
+    commandLine 'sh', 'tools/pre-push/pre-push.sh'
+}
+
+build.finalizedBy copyTalismanHook
 
 dependencyCheck {
     autoUpdate = true

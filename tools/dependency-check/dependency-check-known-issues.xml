@@ -8,68 +8,6 @@
         <cve>CVE-2020-8908</cve>
     </suppress>
 
-
-    <suppress>
-        <notes><![CDATA[
-       file name: ch.qos.logback.contrib/logback-json-classic-0.1.5.jar
-       ]]></notes>
-        <sha1>f7fd4e747a9b0c50fc4f71b0055d5bea64dc05c3</sha1>
-        <cve>CVE-2017-5929</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: ch.qos.logback.contrib/logback-json-core-0.1.5.jar
-   ]]></notes>
-        <sha1>90bdb547819957fc940188f5830b7b59375f6fdd</sha1>
-        <cve>CVE-2017-5929</cve>
-    </suppress>
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2014-3488</cve>
-    </suppress>
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2015-2156</cve>
-    </suppress>
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2019-16869</cve>
-    </suppress>
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2019-20444</cve>
-    </suppress>
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2019-20445</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2021-21290</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2021-21295</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2021-21409</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2021-37136</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
-        <cve>CVE-2021-37137</cve>
-    </suppress>
-
     <suppress>
         <notes><![CDATA[ NETTY TCNATIVE CLASSES ]]></notes>
         <cve>CVE-2021-43797</cve>
