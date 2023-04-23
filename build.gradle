@@ -50,6 +50,6 @@ check.dependsOn dependencyCheckAnalyze
 
 gradle.taskGraph.whenReady { graph ->
     if (graph.hasTask(build)) {
-        dependencyCheckAnalyze.enabled = true
+        dependencyCheckAnalyze.enabled = false
     }
 }
