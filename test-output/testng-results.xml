@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Turbo Smoke Test Automation Test Suite" duration-ms="23021" started-at="2021-11-11T22:52:37 IST" finished-at="2021-11-11T22:53:00 IST">
+    <groups>
+    </groups>
+    <test name="Turbo Smoke Test Cases" duration-ms="23021" started-at="2021-11-11T22:52:37 IST" finished-at="2021-11-11T22:53:00 IST">
+      <class name="com.turbo.UI.tests.EquityLedgerTest">
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.turbo.UI.tests.EquityLedgerTest@8e0379d]" name="setUp" is-config="true" duration-ms="22183" started-at="2021-11-11T22:52:37 IST" finished-at="2021-11-11T22:52:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="uploadPostAllocationData()[pri:1, instance:com.turbo.UI.tests.EquityLedgerTest@8e0379d]" name="uploadPostAllocationData" duration-ms="1" started-at="2021-11-11T22:52:59 IST" description="To verify whether user is able to Upload Post Allocation trade data Successfully" finished-at="2021-11-11T22:52:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPostAllocationData -->
+        <test-method status="PASS" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.turbo.UI.tests.EquityLedgerTest@8e0379d]" name="tearDown" is-config="true" duration-ms="802" started-at="2021-11-11T22:52:59 IST" finished-at="2021-11-11T22:53:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.turbo.UI.tests.EquityLedgerTest.uploadPostAllocationData()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.turbo.UI.tests.EquityLedgerTest -->
+    </test> <!-- Turbo Smoke Test Cases -->
+  </suite> <!-- Turbo Smoke Test Automation Test Suite -->
+</testng-results>
