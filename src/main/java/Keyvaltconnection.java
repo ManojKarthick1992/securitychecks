@@ -12,6 +12,7 @@ public class Keyvaltconnection {
         String clientId = System.getProperty("dbClientID"); // Client ID
         String clientKey = System.getProperty("dbSecretID");  //Client Secret
         clientKey = "123456";
+        String password ="";
 
     }
 }
